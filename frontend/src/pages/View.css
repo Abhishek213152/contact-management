@@ -1,0 +1,51 @@
+.card {
+  background: #f1f2f6;
+  width: 50%;
+  margin: auto;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.card-header {
+  background-color: #009688;
+  color: #fff;
+  padding: 10px;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+.container {
+  padding: 20px;
+}
+
+.container strong {
+  font-weight: bold;
+}
+
+.container span {
+  margin-left: 10px;
+}
+
+.container br {
+  line-height: 20px;
+}
+
+.button-container {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.button-container input[type="button"] {
+  background-color: #009688;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.button-container input[type="button"]:hover {
+  background-color: #00796b;
+}
