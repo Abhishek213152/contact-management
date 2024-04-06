@@ -2,14 +2,17 @@ const express = require("express");
 const bodyParser = require("body-parser");
 const cors = require("cors");
 const mysql = require("mysql2");
+const dotenv = require("dotenv");
+
+dotenv.config();
 
 const app = express();
 
 const db = mysql.createPool({
-  host: "localhost",
-  user: "root",
-  password: "abhi213152",
-  database: "crud",
+  host: process.env.HOST,
+  user: process.env.USER,
+  password: process.env.PASS,
+  database: process.env.DATA,
 });
 
 app.use(cors());
