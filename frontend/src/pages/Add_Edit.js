@@ -22,7 +22,7 @@ const Add_Edit = () => {
     } else {
       if(!id){
         axios
-          .post("http://localhost:4000/post", {
+          .post("https://contact-management-fgqck.vercel.app//post", {
             name,
             email,
             contact,
@@ -36,7 +36,7 @@ const Add_Edit = () => {
       }
       else{
         axios
-          .put(`http://localhost:4000/update/${id}`, {
+          .put(`https://contact-management-fgqck.vercel.app//update/${id}`, {
             name,
             email,
             contact,
@@ -56,8 +56,9 @@ const Add_Edit = () => {
   const {id}=useParams();
 
   useEffect(()=>{
-    axios.get(`http://localhost:4000/get/${id}`)
-    .then((resp)=> setState({...resp.data[0]}));
+    axios
+      .get(`https://contact-management-fgqck.vercel.app//get/${id}`)
+      .then((resp) => setState({ ...resp.data[0] }));
   }, [id]);
 
   const navigate = useNavigate();

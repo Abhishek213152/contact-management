@@ -8,14 +8,16 @@ const Home = () => {
   const [data, setData] = useState([]);
 
   const loadData = async () => {
-    const response = await axios.get("http://localhost:4000/data");
+    const response = await axios.get(
+      "https://contact-management-fgqck.vercel.app//data"
+    );
     setData(response.data);
     console.log(response);
   };
 
   const deleteContact = (id) => {
     if (window.confirm("Are you sure you wanna delete this contact")) {
-      axios.delete(`http://localhost:4000/remove/${id}`);
+      axios.delete(`https://contact-management-fgqck.vercel.app//remove/${id}`);
       toast.success("Deleted Successfully");
       setTimeout(() => loadData(), 500);
     }

@@ -10,7 +10,7 @@ const View = () => {
 
   useEffect(() => {
     axios
-      .get(`http://localhost:4000/get/${id}`)
+      .get(`https://contact-management-fgqck.vercel.app//get/${id}`)
       .then((resp) => setUser({ ...resp.data[0] }));
   }, [id]);
   
